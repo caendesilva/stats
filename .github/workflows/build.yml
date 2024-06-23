@@ -16,5 +16,5 @@ jobs:
       - name: Install dependencies
         run: cd .github/bin && composer install
 
-      - name: Run the build script
-        run: php .github/bin/build.php
+      - name: Convert YAML to JSON
+        run: php .github/bin/build.php convert < data.yml > data.json

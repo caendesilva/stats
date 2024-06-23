@@ -4,7 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 // Get function to call from first argument
 
-$function = $argv[1] ?? null;
+$function = $argv[1] ?: null;
 
 $commands = ['convert'];
 
@@ -19,15 +19,12 @@ if (! in_array($function, $commands)) {
     exit(1);
 }
 
+exit(call_user_func($function) ?: 0);
+
 function convert(): void
 {
-    $yaml = file_get_contents(__DIR__ . '/../../data.yml');
+    $yaml = file_get_contents('php://stdin');
     $data = Symfony\Component\Yaml\Yaml::parse($yaml);
 
-    echo "Data loaded from 'data.yml':\n";
-
-    $json = json_encode($data, JSON_PRETTY_PRINT);
-    file_put_contents(__DIR__ . '/../../data.json', $json);
-
-    echo "Data saved to 'data.json':\n";
+    echo json_encode($data, JSON_PRETTY_PRINT);
 }

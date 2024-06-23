@@ -1,2 +1,3 @@
-# stats
+# Statistics
+
 General aggregated statistics

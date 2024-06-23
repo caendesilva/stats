@@ -9,3 +9,12 @@ dev.to:
   user: CodeWithCaen
   followers: 2267
   reads: 6016
+webstats:
+  cph:
+    desilva.se:
+      yearly: # 20XX0101000000/20XX1231235959/
+        2020: 350
+        2021: 4592
+        2022: 15661
+        2023: 9555
+        2024: 15652

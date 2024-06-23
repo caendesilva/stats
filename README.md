@@ -1,0 +1,2 @@
+# stats
+General aggregated statistics

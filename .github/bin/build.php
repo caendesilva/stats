@@ -4,7 +4,7 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $function = $argv[1] ?: null;
 
-$commands = ['convert', 'lint'];
+$commands = ['convert', 'lint', 'build'];
 
 if (! in_array($function, $commands)) {
     if ($function) {
@@ -56,6 +56,21 @@ function convert(): int
     }
 
     echo $json;
+
+    return 0;
+}
+
+function build(): int
+{
+    try {
+        //
+    } catch (Exception $exception) {
+        line($exception->getMessage());
+
+        return 1;
+    }
+
+    line('Build successful.');
 
     return 0;
 }

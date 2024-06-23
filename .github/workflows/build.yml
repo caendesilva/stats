@@ -21,3 +21,6 @@ jobs:
         run: |
           php .github/bin/build.php convert < data.yml > data.json
           cat data.json
+
+      - name: Build site
+        run: php .github/bin/build.php build

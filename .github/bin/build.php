@@ -65,7 +65,7 @@ function convert(): int
 function build(): int
 {
     try {
-        //
+        mkdir(BASE_PATH.'/site');
     } catch (Exception $exception) {
         line($exception->getMessage());
 

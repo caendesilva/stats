@@ -17,4 +17,6 @@ jobs:
         run: cd .github/bin && composer install
 
       - name: Convert YAML to JSON
-        run: php .github/bin/build.php convert < data.yml > data.json
+        run: |
+          php .github/bin/build.php convert < data.yml > data.json
+          cat data.json

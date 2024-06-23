@@ -18,6 +18,10 @@
                 <li><a href="https://github.com/caendesilva/stats">GitHub repository</a></li>
             </ul>
         </article>
+
+        <footer>
+            <p>Generated on: <?php echo date('Y-m-d H:i:s'); ?></p>
+        </footer>
     </main>
 </body>
 </html>

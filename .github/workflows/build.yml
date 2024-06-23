@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate YAML file
-        run: yamllint data.yml
 
       - name: Install dependencies
         run: cd .github/bin && composer install
+
+      - name: Validate YAML file
+        run: php .github/bin/build.php lint < data.yml
 
       - name: Convert YAML to JSON
         run: |

@@ -21,6 +21,8 @@ if (! in_array($function, $commands)) {
 
 exit(call_user_func($function) ?: 0);
 
+// Commands
+
 function lint(): int
 {
     $yaml = file_get_contents('php://stdin');
@@ -83,6 +85,8 @@ function build(): int
 
     return 0;
 }
+
+// Helpers
 
 function line(string $message): void
 {

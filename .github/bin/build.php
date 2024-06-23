@@ -66,6 +66,7 @@ function build(): int
 {
     try {
         mkdir(BASE_PATH.'/site');
+        copy(BASE_PATH.'/data.json', BASE_PATH.'/site/data.json');
     } catch (Exception $exception) {
         line($exception->getMessage());
 

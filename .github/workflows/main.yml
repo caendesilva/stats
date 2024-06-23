@@ -1,12 +1,28 @@
-name: Build Site
+name: Continuous Integration
 
 on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
+  validate-yaml:
+    name: Validate YAML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: cd .github/bin && composer install
+
+      - name: Validate YAML file
+        run: php .github/bin/build.php lint < data.yml
+
   build:
+    name: Build Site
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

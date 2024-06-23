@@ -21,7 +21,7 @@ if (! in_array($function, $commands)) {
 
 exit(call_user_func($function) ?: 0);
 
-function lint(): int
+function command_lint(): int
 {
     $yaml = file_get_contents('php://stdin');
 
@@ -38,7 +38,7 @@ function lint(): int
     return 0;
 }
 
-function convert(): int
+function command_convert(): int
 {
     try {
         $yaml = file_get_contents('php://stdin');
@@ -68,7 +68,7 @@ function convert(): int
     return 0;
 }
 
-function build(): int
+function command_build(): int
 {
     try {
         mkdir(BASE_PATH.'/site');

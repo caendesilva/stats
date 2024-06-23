@@ -76,11 +76,11 @@ function build(): int
         mkdir(BASE_PATH.'/site');
         copy(BASE_PATH.'/data.json', BASE_PATH.'/site/data.json');
 
-        $html = file_get_contents(__DIR__.'/index.php');
+        $template = file_get_contents(__DIR__.'/index.php');
 
         // Evaluate PHP code
         ob_start();
-        eval('?>'.$html);
+        eval('?>'.$template);
         $html = ob_get_clean();
 
         file_put_contents(BASE_PATH.'/site/index.html', $html);

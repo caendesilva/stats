@@ -1,8 +1,6 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
-
-// Get function to call from first argument
+require_once __DIR__.'/vendor/autoload.php';
 
 $function = $argv[1] ?: null;
 
@@ -10,11 +8,11 @@ $commands = ['convert', 'lint'];
 
 if (! in_array($function, $commands)) {
     if ($function) {
-        echo "Unknown command: $function\n";
+        line("Unknown command: $function");
     }
-    echo "Available commands:\n";
+    line('Available commands:');
     foreach ($commands as $command) {
-        echo "  $command\n";
+        line("  $command");
     }
     exit(1);
 }
@@ -28,11 +26,13 @@ function lint(): int
     try {
         Symfony\Component\Yaml\Yaml::parse($yaml);
     } catch (Symfony\Component\Yaml\Exception\ParseException $exception) {
-        echo $exception->getMessage() . "\n";
+        line($exception->getMessage());
+
         return 1;
     }
 
-    echo "Valid YAML\n";
+    line('YAML is valid.');
+
     return 0;
 }
 
@@ -42,17 +42,25 @@ function convert(): int
         $yaml = file_get_contents('php://stdin');
         $data = Symfony\Component\Yaml\Yaml::parse($yaml);
     } catch (Symfony\Component\Yaml\Exception\ParseException $exception) {
-        echo $exception->getMessage() . "\n";
+        line($exception->getMessage());
+
         return 1;
     }
 
     try {
         $json = json_encode($data, JSON_PRETTY_PRINT);
     } catch (Exception $exception) {
-        echo $exception->getMessage() . "\n";
+        line($exception->getMessage());
+
         return 1;
     }
 
     echo $json;
+
     return 0;
+}
+
+function line(string $message): void
+{
+    echo $message."\n";
 }

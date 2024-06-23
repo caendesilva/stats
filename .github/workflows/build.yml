@@ -12,3 +12,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate YAML file
         run: yamllint data.yml
+
+      - name: Convert YAML to JSON
+        run: python3 -c 'import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=4)' < data.yml > data.json

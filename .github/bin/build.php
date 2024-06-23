@@ -75,6 +75,12 @@ function build(): int
     try {
         mkdir(BASE_PATH.'/site');
         copy(BASE_PATH.'/data.json', BASE_PATH.'/site/data.json');
+
+        $html = file_get_contents(__DIR__.'/index.template.html');
+
+        // We can do stuff here to the HTML
+
+        file_put_contents(BASE_PATH.'/site/index.html', $html);
     } catch (Exception $exception) {
         line($exception->getMessage());
 

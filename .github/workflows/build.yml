@@ -14,7 +14,7 @@ jobs:
         run: yamllint data.yml
 
       - name: Convert YAML to JSON
-        run: yq eval -o=json data.yaml > data.json
+        run: yq eval -o=json data.yml > data.json
 
       - name: Display JSON
         run: cat data.json

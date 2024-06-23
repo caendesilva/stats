@@ -76,7 +76,7 @@ function build(): int
         mkdir(BASE_PATH.'/site');
         copy(BASE_PATH.'/data.json', BASE_PATH.'/site/data.json');
 
-        $html = file_get_contents(__DIR__.'/index.template.html');
+        $html = file_get_contents(__DIR__.'/index.php');
 
         // We can do stuff here to the HTML
 

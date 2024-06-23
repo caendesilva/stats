@@ -20,3 +20,6 @@ jobs:
         run: |
           php .github/bin/build.php convert < data.yml > data.json
           cat data.json
+
+      - name: Assert JSON is valid
+        run: php -r '$data = json_decode(file_get_contents("data.json")); if ($data === null) { echo "Invalid JSON\n"; exit(1); }'

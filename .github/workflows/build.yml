@@ -20,4 +20,4 @@ jobs:
         run: cat data.json
 
       - name: Assert JSON is valid
-        run: jq empty data.json
+        run: php -r '$data = json_decode(file_get_contents("data.json")); if ($data === null) { echo "Invalid JSON\n"; exit(1); }'

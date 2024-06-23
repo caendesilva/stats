@@ -49,6 +49,12 @@ function convert(): int
         return 1;
     }
 
+    $meta = ['meta' => [
+        'last_updated' => date('Y-m-d H:i:s T'),
+    ]];
+
+    $data = array_merge($meta, $data);
+
     try {
         $json = json_encode($data, JSON_PRETTY_PRINT);
     } catch (Exception $exception) {

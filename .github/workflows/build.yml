@@ -12,3 +12,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate YAML file
         run: yamllint data.yml
+
+      - name: Install dependencies
+        run: cd .github/bin && composer install
+
+      - name: Convert YAML to JSON
+        run: |
+          php .github/bin/build.php convert < data.yml > data.json
+          cat data.json
+
+      - name: Assert JSON is valid
+        run: php -r '$data = json_decode(file_get_contents("data.json")); if ($data === null) { echo "Invalid JSON\n"; exit(1); }'

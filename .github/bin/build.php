@@ -36,10 +36,23 @@ function lint(): int
     return 0;
 }
 
-function convert(): void
+function convert(): int
 {
-    $yaml = file_get_contents('php://stdin');
-    $data = Symfony\Component\Yaml\Yaml::parse($yaml);
+    try {
+        $yaml = file_get_contents('php://stdin');
+        $data = Symfony\Component\Yaml\Yaml::parse($yaml);
+    } catch (Symfony\Component\Yaml\Exception\ParseException $exception) {
+        echo $exception->getMessage() . "\n";
+        return 1;
+    }
 
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    try {
+        $json = json_encode($data, JSON_PRETTY_PRINT);
+    } catch (Exception $exception) {
+        echo $exception->getMessage() . "\n";
+        return 1;
+    }
+
+    echo $json;
+    return 0;
 }

@@ -78,7 +78,10 @@ function build(): int
 
         $html = file_get_contents(__DIR__.'/index.php');
 
-        // We can do stuff here to the HTML
+        // Evaluate PHP code
+        ob_start();
+        eval('?>'.$html);
+        $html = ob_get_clean();
 
         file_put_contents(BASE_PATH.'/site/index.html', $html);
     } catch (Exception $exception) {

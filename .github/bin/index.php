@@ -21,7 +21,7 @@
         <footer>
             <h2>About</h2>
             <p>See the source code on the <a href='https://github.com/caendesilva/stats'>GitHub repository</a></p>
-            <p>Generated on: <?php echo date('Y-m-d H:i:s T'); ?></p>
+            <p>Static PHP compiled on: <?php echo date('Y-m-d H:i:s T'); ?></p>
         </footer>
     </main>
 </body>

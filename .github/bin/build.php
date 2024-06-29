@@ -53,6 +53,7 @@ function convert(): int
 
     $meta = ['meta' => [
         'last_updated' => date('Y-m-d H:i:s T'),
+        'source' => 'https://github.com/caendesilva/stats/blob/master/data.yml',
     ]];
 
     $data = array_merge($meta, $data);

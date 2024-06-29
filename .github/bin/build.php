@@ -59,7 +59,7 @@ function convert(): int
     $data = array_merge($meta, $data);
 
     try {
-        $json = json_encode($data, JSON_PRETTY_PRINT);
+        $json = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     } catch (Exception $exception) {
         line($exception->getMessage());
 

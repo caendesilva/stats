@@ -1,6 +1,6 @@
 twitter:
   user: CodeWithCaen
-  followers: 900
+  followers: 920
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}

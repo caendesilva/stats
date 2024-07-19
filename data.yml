@@ -7,7 +7,7 @@ github:
   contributions: 90000 # Todo: Support substitution like {{ github.contributions }}
 dev.to:
   user: CodeWithCaen
-  followers: 2267
+  followers: 2650
   reads: 6016
 webstats:
   cph:

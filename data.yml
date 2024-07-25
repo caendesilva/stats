@@ -1,15 +1,15 @@
 currentlyLearning: Applied Artificial Intelligence
 twitter:
   user: CodeWithCaen
-  followers: 942
+  followers: 944
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}
   contributions: 90000 # Todo: Support substitution like {{ github.contributions }}
 dev.to:
   user: CodeWithCaen
-  followers: 2650
-  reads: 6690
+  followers: 3512
+  reads: 9498
 webstats:
   cph:
     desilva.se:

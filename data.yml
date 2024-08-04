@@ -8,8 +8,8 @@ github:
   contributions: 96000 # Todo: Support substitution like {{ github.contributions }}
 dev.to:
   user: CodeWithCaen
-  followers: 3512
-  reads: 9498
+  followers: 4535
+  reads: 9837
 webstats:
   cph:
     desilva.se:

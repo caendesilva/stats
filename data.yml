@@ -1,7 +1,7 @@
 currentlyLearning: Applied Artificial Intelligence
 twitter:
   user: CodeWithCaen
-  followers: 1022
+  followers: 1023
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}

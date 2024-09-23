@@ -5,7 +5,7 @@ twitter:
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}
-  contributions: 96000 # Todo: Support substitution like {{ github.contributions }}
+  contributions: 97000 # Todo: Support substitution like {{ github.contributions }}
 dev.to:
   user: CodeWithCaen
   followers: 4535

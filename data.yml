@@ -1,7 +1,7 @@
-currentlyLearning: Applied Artificial Intelligence
+currentlyLearning: ArchiCad
 twitter:
   user: CodeWithCaen
-  followers: 1073
+  followers: 1075
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}

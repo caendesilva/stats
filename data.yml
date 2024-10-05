@@ -1,7 +1,7 @@
 currentlyLearning: ArchiCad
 twitter:
   user: CodeWithCaen
-  followers: 1075
+  followers: 1080
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}

@@ -1,7 +1,7 @@
 currentlyLearning: "Quantum Computing"
 twitter:
   user: CodeWithCaen
-  followers: 1092
+  followers: 1084
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}

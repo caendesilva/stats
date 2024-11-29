@@ -1,7 +1,7 @@
 currentlyLearning: "Creative Writing"
 twitter:
   user: CodeWithCaen
-  followers: 1092
+  followers: 1044
 github:
   user: caendesilva
   followers: 44 # Todo: Support substitution like {{ github.followers }}
